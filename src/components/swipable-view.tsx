@@ -1,5 +1,5 @@
 import { Box } from "native-base";
-import React, {useState} from "react";
+import React from "react";
 import { Dimensions } from "react-native";
 import {
   PanGestureHandler,
@@ -13,7 +13,6 @@ import Animated, {
   withTiming,
   runOnJS
 } from "react-native-reanimated";
-import { event } from "react-native-reanimated";
 import { makeStyledComponent } from "../utils/styled";
 
 const StyledView = makeStyledComponent(Animated.View)

@@ -36,7 +36,7 @@ const AnimatedTaskLabel = memo((props: Props) => {
     }), [strikethrough, textColor, inactiveTextColor]
   )
   const strikethroughWidth = useSharedValue(0)
-  const strikethroughAniamtedStyles = useAnimatedStyle(
+  const strikethroughAnimatedStyles = useAnimatedStyle(
     () => ({
       width: `${strikethroughWidth.value * 100}%`,
       borderBottomColor: interpolateColor(
@@ -70,7 +70,7 @@ const AnimatedTaskLabel = memo((props: Props) => {
         <AnimatedText fontSize={19} noOfLines={1} isTruncated px={1} style={[textColorAnimatedStyles]}>
           {children}
         </AnimatedText>
-        <AnimatedBox position="absolute" h={1} borderBottomWidth={1} style={[strikethroughAniamtedStyles]}/>
+        <AnimatedBox position="absolute" h={1} borderBottomWidth={1} style={[strikethroughAnimatedStyles]}/>
       </AnimatedHStack>
     </Pressable>
   )
